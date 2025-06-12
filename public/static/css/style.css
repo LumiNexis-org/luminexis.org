@@ -1,0 +1,519 @@
+/* === index.html === */
+
+main.top-page-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* === about.css === */
+
+.about {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.about-page__intro {
+    text-align: center;
+    margin: 2rem auto 3rem;
+}
+
+.about-page__story-link {
+    margin-top: 1.5rem;
+}
+
+.about-page__story-link a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-page__story-link a:active {
+    background-color: #2B4C65;
+}
+
+.about-page__values {
+    background-color: var(--bg-main);
+    padding: 3rem 1rem;
+}
+
+.about-page__values h2 {
+    margin-bottom: 2rem;
+}
+
+.about-page__values ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-page__values li {
+    background-color: var(--bg-section);
+    border: 1px solid var(--border-section);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-section);
+}
+
+.about-page__values li strong {
+    font-weight: 600;
+    color: var(--color-h1-h2);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.value-desc {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.about-page__activities ul li {
+    list-style: none;
+    color: var(--color-text);
+}
+
+.activity-note {
+    margin-top: 0.25rem;
+}
+
+.about-page__greeting .text-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-page__greeting .profile {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.about-page__greeting .profile img {
+    width: 250px;
+    border-radius: 10%;
+}
+
+.about-page__greeting .greeting-text {
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.about-page__organization .table {
+    width: 100%;
+    background-color: var(--bg-table);
+    color: var(--color-text);
+    border: 1px solid var(--border-section);
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.about-page__organization .table caption {
+    color: var(--color-h3-h5);
+    text-align: left;
+    padding: 1rem;
+}
+
+.about-page__organization .table th {
+    background-color: var(--bg-th);
+    color: var(--color-h1-h2);
+    border-bottom: 1px solid var(--border-section);
+    padding: 1rem;
+    text-align: left;
+}
+
+.about-page__organization .table td {
+    border-bottom: 1px solid var(--border-section);
+    padding: 1rem;
+}
+
+.about-page__organization .table tbody tr:nth-child(even) {
+    background-color: var(--bg-table-alt);
+}
+
+.about-page__wadachi .github-link {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-page__wadachi .github-link a {
+    color: var(--color-link);
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.about-page__wadachi .github-link a:hover {
+    text-decoration: none;
+}
+
+.about-page__connect {
+    padding: 4rem 2rem;
+    background-color: var(--bg-main);
+}
+
+.about-page__connect h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.about-page__connect p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-page__connect ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-page__connect ul li {
+    text-align: center;
+}
+
+.about-page__connect ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
+}
+
+.about-page__connect ul li a:hover {
+    box-shadow: var(--shadow-glow);
+}
+
+.about-page__connect ul li a i {
+    font-size: 1.2rem;
+}
+
+.form-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.form-disabled span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+/* === story.html === */
+.story-page {
+    padding: 2rem 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.story-page__brand p,
+.story-page__logo p {
+    line-height: 2.25;
+}
+
+.story-page__logo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.story-page__logo-img img {
+    width: 75%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+}
+
+strong.highlight {
+    color: var(--color-link-hover);
+    font-weight: bold;
+}
+
+.story-page blockquote {
+    border-left: 4px solid var(--border-accent);
+    padding-left: 1rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--color-text);
+    opacity: 0.9;
+}
+
+
+/* === connect.html === */
+
+.form-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 15, 23, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3E5C84;
+    font-weight: bold;
+    font-size: 1.1rem;
+    z-index: 10;
+    pointer-events: all;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.desc {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    width: 60%;
+}
+
+.contact-form h2 {
+    color: #4F729C;
+    margin-bottom: 1rem;
+    border-left: 3px solid #4F729C;
+    padding-left: 0.75rem;
+}
+
+.contact-form p {
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #3E5C84;
+}
+
+.required {
+    color: #DA4F4F;
+    margin-left: 0.25rem;
+    font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background-color: #10131A;
+    color: #D0D6F9;
+    border: 1px solid #2B3342;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .checkbox-wrapper {
+    display: flex;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #3E5C84;
+    align-items: center;
+    gap: 1rem;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-wrapper .checkmark {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #2B3342;
+    background-color: #0C1018;
+    border-radius: 4px;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+}
+
+.checkbox-wrapper .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #5474AD;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-wrapper input:checked+.checkmark::after {
+    display: block;
+}
+
+.checkbox-wrapper input:checked+.checkmark {
+    border-color: #5474AD;
+}
+
+.contact-form button {
+    display: flex;
+    margin: 2rem auto 0;
+    padding: 0.75rem 1.5rem;
+    background-color: #1E2331;
+    color: #5474AD;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #2B3342;
+    color: #fff;
+    box-shadow: 0 0 8px #D0D6F9aa;
+}
+
+@media (max-width: 768px) {
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .value-desc,
+    .about-page__connect p,
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+    }
+
+    .about-page__connect ul li a {
+        font-size: 0.95rem;
+    }
+
+    .about,
+    section {
+        width: 90%;
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .value-desc,
+    .about-page__connect p,
+    .about-page__greeting .greeting-text,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+    }
+
+    .about-page__connect ul {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .about-page__connect ul li a {
+        font-size: 0.95rem;
+        padding: 0.65rem 1rem;
+    }
+
+    .about-page__greeting .text-img {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .about-page__greeting .profile img {
+        width: 180px;
+    }
+
+    .story-page {
+        padding: 1.5rem 1rem;
+    }
+
+    .story-page__logo-img img {
+        width: 90%;
+    }
+
+    .table-wrapper {
+        padding: 0 1rem;
+    }
+
+    .about-page__organization .table {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 0 0.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem 1rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 0.65rem 1.25rem;
+    }
+
+    .form-overlay {
+        font-size: 1rem;
+    }
+
+    .checkbox-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

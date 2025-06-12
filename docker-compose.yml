@@ -1,0 +1,64 @@
+version: '3'
+
+services:
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+      - ./certs:/etc/nginx/certs:ro
+
+      - ./vhost.d:/etc/nginx/vhost.d
+
+      - ./html:/usr/share/nginx/html
+
+    networks:
+      - webproxy 
+
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    container_name: nginx-letsencrypt
+
+    depends_on:
+      - nginx-proxy
+
+    environment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+
+    volumes:
+      - ./acme.sh:/etc/acme.sh
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+      - ./vhost.d:/etc/nginx/vhost.d
+      - ./html:/usr/share/nginx/html
+
+    networks:
+      - webproxy
+
+  web:
+    image: nginx:alpine
+    container_name: luminexis-web
+
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+
+    environment:
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+
+    networks:
+      - webproxy
+
+    restart: unless-stopped
+
+networks:
+  webproxy: 
+    driver: bridge

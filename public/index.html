@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumiNexis</title>
+
+    <meta name="description" content="LumiNexisは、夢に遠回りしてきた自分の“今”を支えるために生まれた個人活動団体です。歩んできた轍が、前向く灯になる。">
+    <meta name="keywords" content="LumiNexis,自己表現,ポートフォリオ,ありがとう,夢,IT専門学生,一二三翔,翔,Webサイト,ブランド">
+    <meta name="author" content="一二三 翔（Creator of LumiNexis）">
+    <link rel="canonical" href="https://luminexis.org/">
+
+    <meta property="og:title" content="LumiNexis">
+    <meta property="og:site_name" content="LumiNexis">
+    <meta property="og:description" content="夢は遠回りしても届く。その歩みを、作品に残す。それがLumiNexis。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luminexis.org/">
+    <meta property="og:image" content="https://luminexis.org/static/img/ogp.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LumiNexis">
+    <meta name="twitter:description" content="自分の歩んできた軌跡を、前向く灯に変えていく。個人ブランドLumiNexisの公式サイト。">
+    <meta name="twitter:image" content="https://luminexis.org/static/img/ogp.png">
+
+    <link rel="icon" href="https://luminexis.org/favicon.ico">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://kit.fontawesome.com/9d019bebc3.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="./index.html" class="site-logo-link">
+                <img src="static/img/logo.png" alt="LumiNexis-Logo">
+            </a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="https://github.com/LumiNexis-org" target="_blank">Works</a></li>
+                    <li><a href="./connect.html">Connect</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="np-header">
+            <input id="sidebar_toggle" class="sidebar_button" type="checkbox" />
+            <div class="site_header">
+                <div class="left_content">
+                    <a href="./index.html"><img src="./static/img/logo.png" alt="LumiNexis-Logo"></a>
+                </div>
+                <div class="right_content">
+                    <label class="menu_toggle" for="sidebar_toggle">
+                        <i class="fa-solid fa-grip-lines"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+                </div>
+            </div>
+            <div class="sidebar_menu">
+                <input id="category_1" type="checkbox" hidden />
+                <div class="menu_category_button">
+                    <label class="menu_category_label" for="category_1">About</label>
+                </div>
+                <div id="category_area_1" class="menu_submenu_area">
+                    <a class="submenu_item" href="./about.html">ブランド概要</a>
+                    <a class="submenu_item" href="./story.html">ストーリー</a>
+                    <a class="submenu_item" href="./about.html#organization">団体概要</a>
+                    <label class="submenu_item" for="category_1">閉じる</label>
+                </div>
+                <input id="category_2" type="checkbox" hidden />
+                <div class="menu_category_button">
+                    <label class="menu_category_label" for="category_2">Works</label>
+                </div>
+                <div id="category_area_2" class="menu_submenu_area">
+                    <a class="submenu_item" href="https://github.com/LumiNexis-org" target="_blank">GitHub</a>
+                    <a class="submenu_item" href="./about.html#wadachi">轍</a>
+                    <label class="submenu_item" for="category_2">閉じる</label>
+                </div>
+
+                <input id="category_3" type="checkbox" hidden />
+                <div class="menu_category_button">
+                    <label class="menu_category_label" for="category_3">Connect</label>
+                </div>
+                <div id="category_area_3" class="menu_submenu_area">
+                    <a class="submenu_item" href="./connect.html">お問い合わせ</a>
+                    <a class="submenu_item" href="./about.html#connect">SNSでつながる</a>
+                    <label class="submenu_item" for="category_3">閉じる</label>
+                </div>
+
+                <!-- もしオーバレイしたかったら↓ -->
+                <!--                 <input id="category_3" type="checkbox" hidden />
+                <div class="menu_category_wrapper">
+                    <div class="menu_category_button">
+                        <label class="menu_category_label" for="category_3">カテゴリー3</label>
+                    </div>
+                    <div id="category_area_3" class="menu_submenu_area">
+                        <a class="submenu_item" href="#">子カテゴリ1</a>
+                        <a class="submenu_item" href="#">子カテゴリ2</a>
+                        <a class="submenu_item" href="#">子カテゴリ3</a>
+                        <label class="submenu_item" for="category_3">閉じる</label>
+                    </div>
+                    
+                    <div class="menu_overlay">
+                        <span>準備中</span>
+                    </div>
+                </div> -->
+            </div>
+            <label class="sidebar_overlay" for="sidebar_toggle"></label>
+        </div>
+        <main class="top-page-main">
+            <h1 class="title">意志を光に。未来を道に。</h1>
+            <p class="main-text">──"ありがとう"を、進む力に。</p>
+        </main>
+        <footer>
+            <p class="footer">&copy; LumiNexis All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

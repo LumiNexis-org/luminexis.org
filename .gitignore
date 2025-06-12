@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# dotenv
+.env
+.env.*
+
+# Log files
+*.log
+
+# Docker（将来的に使うなら）
+docker-compose.override.yml
