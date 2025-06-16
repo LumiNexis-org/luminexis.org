@@ -1,12 +1,24 @@
-# macOS
+# 環境変数・機密情報
+.env            # 本物の秘密は無視する
+!.env.example   # でもテンプレは追跡OKにする
+
+# OSゴミファイル
 .DS_Store
 
-# dotenv
-.env
-.env.*
+# エディタ設定（個人差あるやつ）
+.vscode/
+.idea/
+*.iml
 
-# Log files
+# Node.js（使ってたら）
+node_modules/
+npm-debug.log*
+
+# Docker・ログ系
 *.log
+*.pid
 
-# Docker（将来的に使うなら）
-docker-compose.override.yml
+# ビルド・キャッシュ系
+tmp/
+cache/
+dist/
