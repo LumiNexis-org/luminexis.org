@@ -1,24 +1,86 @@
-# 環境変数・機密情報
-.env            # 本物の秘密は無視する
-!.env.example   # でもテンプレは追跡OKにする
+# ==========================
+# 🔐 Environment Variables
+# ==========================
+.env
+.env.*
+!.env.example            # Keep the template for others
 
-# OSゴミファイル
-.DS_Store
+# ==========================
+# 🐍 Python
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+*.manifest
+*.spec
+.cache/
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+*.mo
+*.pot
 
-# エディタ設定（個人差あるやつ）
+# ==========================
+# ⚙️ Django
+# ==========================
+db.sqlite3               # Default DB
+media/                   # Uploaded media files
+staticfiles/             # Static files (collected)
+local_settings.py        # Local-only settings
+
+# ==========================
+# 🧪 Test / Coverage
+# ==========================
+htmlcov/
+.pytest_cache/
+coverage/
+
+# ==========================
+# 🗄️ Database Dumps (optional)
+# ==========================
+*.sql
+*.dump
+
+# ==========================
+# 🐳 Docker & Logs
+# ==========================
+*.log
+*.pid
+
+# ==========================
+# 📦 Node.js
+# ==========================
+node_modules/
+npm-debug.log*
+
+# ==========================
+# ⚙️ Editor Configs
+# ==========================
 .vscode/
 .idea/
 *.iml
 
-# Node.js（使ってたら）
-node_modules/
-npm-debug.log*
-
-# Docker・ログ系
-*.log
-*.pid
-
-# ビルド・キャッシュ系
+# ==========================
+# ⚒️ Build / Cache
+# ==========================
 tmp/
 cache/
 dist/
+
+# ==========================
+# 💻 OS Junk
+# ==========================
+.DS_Store
+Thumbs.db
