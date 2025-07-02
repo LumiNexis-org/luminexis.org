@@ -14,212 +14,150 @@ main.top-page-main {
 
 .about {
     width: 70%;
-    margin: 0 auto;
+    margin: auto;
 }
 
-.about-page__intro {
+.about-page-intro {
     text-align: center;
-    margin: 2rem auto 3rem;
 }
 
-.about-page__story-link {
-    margin-top: 1.5rem;
+.about-page-story-link a {
+    background-color: transparent;
+    color: #3D5C85;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-.about-page__story-link a {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.about-page-story-link a:hover {
+    color: #5A84BB;
+    text-decoration: underline;
 }
 
-.about-page__story-link a:active {
-    background-color: #2B4C65;
-}
-
-.about-page__values {
-    background-color: var(--bg-main);
-    padding: 3rem 1rem;
-}
-
-.about-page__values h2 {
-    margin-bottom: 2rem;
-}
-
-.about-page__values ol {
+/* バリュー */
+.about-page-values li {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.about-page__values li {
-    background-color: var(--bg-section);
-    border: 1px solid var(--border-section);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    box-shadow: var(--shadow-section);
-}
-
-.about-page__values li strong {
-    font-weight: 600;
-    color: var(--color-h1-h2);
-    display: inline-block;
     margin-bottom: 0.5rem;
 }
 
-.value-desc {
-    color: var(--color-text);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
+/* 活動内容 */
 
-.about-page__activities ul li {
+.about-page-activities li {
     list-style: none;
-    color: var(--color-text);
 }
 
-.activity-note {
-    margin-top: 0.25rem;
-}
-
-.about-page__greeting .text-img {
+.text-img {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.about-page__greeting .profile {
-    flex-shrink: 0;
+.profile {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+
+.profile img {
+    width: 100%;
+}
+
+.greeting-text {
+    width: 70%;
+    margin: auto;
     text-align: center;
 }
 
-.about-page__greeting .profile img {
-    width: 250px;
-    border-radius: 10%;
-}
+/* 団体概要 */
 
-.about-page__greeting .greeting-text {
-    max-width: 600px;
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-.table-wrapper {
-    overflow-x: auto;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.about-page__organization .table {
-    width: 100%;
-    background-color: var(--bg-table);
-    color: var(--color-text);
-    border: 1px solid var(--border-section);
+table {
+    background-color: #0C1018;
+    color: #5474AD;
+    border: 1px solid #202530;
     border-collapse: collapse;
-    font-size: 0.95rem;
-}
-
-.about-page__organization .table caption {
-    color: var(--color-h3-h5);
-    text-align: left;
-    padding: 1rem;
-}
-
-.about-page__organization .table th {
-    background-color: var(--bg-th);
-    color: var(--color-h1-h2);
-    border-bottom: 1px solid var(--border-section);
-    padding: 1rem;
-    text-align: left;
-}
-
-.about-page__organization .table td {
-    border-bottom: 1px solid var(--border-section);
-    padding: 1rem;
-}
-
-.about-page__organization .table tbody tr:nth-child(even) {
-    background-color: var(--bg-table-alt);
-}
-
-.about-page__wadachi .github-link {
-    margin-top: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.about-page__wadachi .github-link a {
-    color: var(--color-link);
-    text-decoration: underline;
-    background-color: transparent;
-}
-
-.about-page__wadachi .github-link a:hover {
-    text-decoration: none;
-}
-
-.about-page__connect {
-    padding: 4rem 2rem;
-    background-color: var(--bg-main);
-}
-
-.about-page__connect h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-}
-
-.about-page__connect p {
-    font-size: 1rem;
-    line-height: 1.8;
+    width: 100%;
     margin-bottom: 2rem;
+}
+
+table caption {
+    color: #3E5C84;
+    margin-bottom: 0.5rem;
+}
+
+table th {
+    background-color: #181D28;
+    color: #4F729C;
+    border-bottom: 1px solid #202530;
+    padding: 0.5rem;
+}
+
+table td {
+    border: 1px solid #202530;
+    padding: 0.5rem;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #0A0E14;
+}
+
+/* 轍 */
+
+.github-link {
     text-align: center;
 }
 
-.about-page__connect ul {
+.github-link a {
+    background-color: transparent;
+    color: #3D5C85;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.github-link a:hover {
+    color: #5A84BB;
+    text-decoration: underline;
+}
+
+/* Connect */
+
+.about-page-connect ul {
     list-style: none;
+    text-align: center;
     padding: 0;
-    margin: 0 auto;
-    max-width: 50%;
+    margin: 1rem auto 0 auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 50%;
+
 }
 
-.about-page__connect ul li {
-    text-align: center;
-}
-
-.about-page__connect ul li a {
+.about-page-connect ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem;
     text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
     font-size: 1rem;
+    background-color: transparent;
+    color: #5474AD;
+    border: 1px solid #446B9A;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.about-page__connect ul li a:hover {
-    box-shadow: var(--shadow-glow);
-}
-
-.about-page__connect ul li a i {
-    font-size: 1.2rem;
-}
-
-.form-disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
+.about-page-connect ul li a:hover {
+    background-color: #2B3342;
+    color: #D0D6F9;
 }
 
 .form-disabled span {
@@ -227,127 +165,94 @@ main.top-page-main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    color: var(--color-text);
+    color: #4C5670;
+    cursor: not-allowed;
+    opacity: 0.5;
     font-weight: bold;
-}
-
-/* === story.html === */
-.story-page {
-    padding: 2rem 1rem;
-    line-height: 1.8;
-    color: var(--color-text);
-}
-
-.story-page__brand p,
-.story-page__logo p {
-    line-height: 2.25;
-}
-
-.story-page__logo-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.story-page__logo-img img {
-    width: 75%;
-    max-width: 480px;
-    height: auto;
-    display: block;
-}
-
-strong.highlight {
-    color: var(--color-link-hover);
-    font-weight: bold;
-}
-
-.story-page blockquote {
-    border-left: 4px solid var(--border-accent);
-    padding-left: 1rem;
-    margin: 2rem 0;
-    font-style: italic;
-    color: var(--color-text);
-    opacity: 0.9;
-}
-
-
-/* === connect.html === */
-
-.form-container {
-    position: relative;
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-}
-
-.form-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(12, 15, 23, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #3E5C84;
-    font-weight: bold;
-    font-size: 1.1rem;
-    z-index: 10;
-    pointer-events: all;
-    border-radius: 0.5rem;
-    text-align: center;
-}
-
-.desc {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.contact-form {
-    width: 60%;
-}
-
-.contact-form h2 {
-    color: #4F729C;
-    margin-bottom: 1rem;
-    border-left: 3px solid #4F729C;
-    padding-left: 0.75rem;
-}
-
-.contact-form p {
-    text-align: center;
-}
-
-.contact-form label {
-    display: block;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #3E5C84;
-}
-
-.required {
-    color: #DA4F4F;
-    margin-left: 0.25rem;
-    font-size: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    background-color: #10131A;
-    color: #D0D6F9;
-    border: 1px solid #2B3342;
+    border-radius: 0.4rem;
     padding: 0.75rem;
-    border-radius: 6px;
+    border: 1px solid #2B3342;
+}
+
+/* ブランドストーリー */
+
+.story-page-brand {
+    width: 70%;
+}
+
+.story-page-logo {
+    width: 70%;
+}
+
+.story-page-logo-img {
+    width: 50%;
+    margin: 0 auto 2rem auto;
+}
+
+.story-page-logo-img img {
+    width: 100%;
+}
+
+
+
+/* フォーム */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* ラベル */
+.form-container form label {
+    color: #4F729C;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
     font-size: 1rem;
 }
 
-.contact-form textarea {
-    resize: vertical;
+/* 入力欄、テキストエリア、セレクト */
+input,
+textarea,
+select {
+    background-color: #0C0F17;
+    color: #5474AD;
+    border: 1px solid #2B3342;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: all 0.3s ease;
 }
 
+/* プレースホルダー */
+::placeholder {
+    color: #3A4D6A;
+    opacity: 1;
+}
+
+/* フォーカス・選択時 */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(90, 132, 187, 0.5);
+    border-color: #5A84BB;
+}
+
+/* 無効状態 */
+input:disabled,
+textarea:disabled,
+select:disabled {
+    background-color: #0B0D14;
+    color: #4C5670;
+    border-color: #2B3342;
+    cursor: not-allowed;
+}
+
+/* チェックボックスカスタム */
 .contact-form .checkbox-wrapper {
     display: flex;
     margin-top: 1.5rem;
@@ -368,7 +273,6 @@ strong.highlight {
     background-color: #0C1018;
     border-radius: 4px;
     position: relative;
-    box-sizing: border-box;
     display: inline-flex;
 }
 
@@ -385,7 +289,7 @@ strong.highlight {
     transform: rotate(45deg);
 }
 
-.checkbox-wrapper input:checked+.checkmark::after {
+.checkbox-wrapper input:checked + .checkmark::after {
     display: block;
 }
 
@@ -411,109 +315,85 @@ strong.highlight {
     box-shadow: 0 0 8px #D0D6F9aa;
 }
 
-@media (max-width: 768px) {
 
-    .contact-form {
+/* ボタン */
+button[type="submit"] {
+    background-color: #446B9A;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #5A84BB;
+}
+
+button[type="submit"]:disabled {
+    background-color: #2B3342;
+    color: #4C5670;
+    cursor: not-allowed;
+}
+
+/* 必須アスタリスク */
+.required {
+    color: #C45B5B;
+    margin-left: 0.25rem;
+    font-weight: bold;
+}
+
+.form-container {
+    position: relative;
+    width: 100%;
+}
+
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 13, 20, 0.7);
+    z-index: 96;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0;
+    }
+
+    .about {
+        width: 100%;
+    }
+    
+    .story-page-brand {
         width: 100%;
     }
 
-    .value-desc,
-    .about-page__connect p,
-    .contact-form label,
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 0.95rem;
+    .story-page-logo {
+        width: 100%;
     }
 
-    .contact-form button {
-        font-size: 0.9rem;
+    .story-page-logo-img {
+        width: 100%;
     }
 
-    .about-page__connect ul li a {
-        font-size: 0.95rem;
+    .profile {
+        width: 100%;
     }
 
-    .about,
-    section {
-        width: 90%;
-        padding: 2rem 1rem;
-        margin: 2rem auto;
+    .greeting-text {
+        width: 100%;
     }
 
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.25rem;
-    }
-
-    .value-desc,
-    .about-page__connect p,
-    .about-page__greeting .greeting-text,
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 0.95rem;
-    }
-
-    .about-page__connect ul {
+    .about-page-connect ul {
         max-width: 100%;
-        padding: 0 1rem;
-    }
-
-    .about-page__connect ul li a {
-        font-size: 0.95rem;
-        padding: 0.65rem 1rem;
-    }
-
-    .about-page__greeting .text-img {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-
-    .about-page__greeting .profile img {
-        width: 180px;
-    }
-
-    .story-page {
-        padding: 1.5rem 1rem;
-    }
-
-    .story-page__logo-img img {
-        width: 90%;
-    }
-
-    .table-wrapper {
-        padding: 0 1rem;
-    }
-
-    .about-page__organization .table {
-        font-size: 0.9rem;
-    }
-
-    .form-container {
-        width: 90%;
-        padding: 0 0.5rem;
-    }
-
-    .contact-form {
-        padding: 1.5rem 1rem;
-    }
-
-    .contact-form button {
-        font-size: 0.9rem;
-        padding: 0.65rem 1.25rem;
-    }
-
-    .form-overlay {
-        font-size: 1rem;
-    }
-
-    .checkbox-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
     }
 }

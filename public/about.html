@@ -24,7 +24,10 @@
     <meta name="twitter:description" content="LumiNexisの想い、MVV、ブランドストーリーを語るページ。轍が灯になる理由を、ここで。">
     <meta name="twitter:image" content="https://luminexis.org/static/img/ogp.png">
 
-    <link rel="icon" href="https://luminexis.org/favicon.ico">
+    <link rel="icon" href="static/img/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/svg+xml" href="static/img/favicon.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="static/img/apple-touch-icon.png" />
+
     <link rel="stylesheet" href="static/css/common.css">
     <link rel="stylesheet" href="static/css/style.css">
     <script src="https://kit.fontawesome.com/9d019bebc3.js" crossorigin="anonymous" defer></script>
@@ -32,85 +35,99 @@
 
 <body>
     <div class="wrapper">
+
         <header>
-            <a href="./index.html" class="site-logo-link">
-                <img src="static/img/logo.png" alt="LumiNexis-Logo">
-            </a>
-            <nav>
-                <ul class="nav">
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="https://github.com/LumiNexis-org" target="_blank">Works</a></li>
-                    <li><a href="./connect.html">Connect</a></li>
-                </ul>
-            </nav>
+            <div class="left-content">
+                <a href="index.html">
+                    <img src="static/img/logo.png" alt="LumiNexis-Logo">
+                </a>
+            </div>
+            <div class="right-content">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://github.com/LumiNexis-org" target="_blank">Works</a></li>
+                        <li><a href="connect.html">Connect</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
+
         <div class="np-header">
-            <input id="sidebar_toggle" class="sidebar_button" type="checkbox" />
+            <input type="checkbox" id="switch" class="slider-switch">
             <div class="site_header">
-                <div class="left_content">
-                    <a href="./index.html"><img src="./static/img/logo.png" alt="LumiNexis-Logo"></a>
+                <div class="left-content">
+                    <a href="index.html">
+                        <img src="static/img/logo.png" alt="LumiNexis-Logo">
+                    </a>
                 </div>
-                <div class="right_content">
-                    <label class="menu_toggle" for="sidebar_toggle">
+                <div class="right-content">
+                    <label for="switch" class="menu-toggle">
                         <i class="fa-solid fa-grip-lines"></i>
                         <i class="fa-solid fa-xmark"></i>
                     </label>
                 </div>
             </div>
-            <div class="sidebar_menu">
-                <input id="category_1" type="checkbox" hidden />
-                <div class="menu_category_button">
-                    <label class="menu_category_label" for="category_1">About</label>
-                </div>
-                <div id="category_area_1" class="menu_submenu_area">
-                    <a class="submenu_item" href="./about.html">ブランド概要</a>
-                    <a class="submenu_item" href="./story.html">ストーリー</a>
-                    <a class="submenu_item" href="./about.html#organization">団体概要</a>
-                    <label class="submenu_item" for="category_1">閉じる</label>
-                </div>
-                <input id="category_2" type="checkbox" hidden />
-                <div class="menu_category_button">
-                    <label class="menu_category_label" for="category_2">Works</label>
-                </div>
-                <div id="category_area_2" class="menu_submenu_area">
-                    <a class="submenu_item" href="https://github.com/LumiNexis-org" target="_blank">GitHub</a>
-                    <a class="submenu_item" href="./about.html#wadachi">轍</a>
-                    <label class="submenu_item" for="category_2">閉じる</label>
+            <div class="family-area">
+                <div class="category-switch">
+                    <a href="index.html" class="category-parent-link">Home</a>
                 </div>
 
-                <input id="category_3" type="checkbox" hidden />
-                <div class="menu_category_button">
-                    <label class="menu_category_label" for="category_3">Connect</label>
+                <input type="checkbox" class="category-switch" id="category-1" hidden>
+                <div class="category-switch">
+                    <label for="category-1" class="category-parent">About</label>
                 </div>
-                <div id="category_area_3" class="menu_submenu_area">
-                    <a class="submenu_item" href="./connect.html">お問い合わせ</a>
-                    <a class="submenu_item" href="./about.html#connect">SNSでつながる</a>
-                    <label class="submenu_item" for="category_3">閉じる</label>
+                <div id="category-children-1" class="category-children">
+                    <a href="about.html#about" class="children-category">ブランド概要</a>
+                    <a href="story.html" class="children-category">ストーリー</a>
+                    <a href="about.html#organization" class="children-category">団体概要</a>
+                    <label for="category-1" class="children-category-close">閉じる</label>
+                </div>
+
+                <input type="checkbox" class="category-switch" id="category-2" hidden>
+                <div class="category-switch">
+                    <label for="category-2" class="category-parent">Works</label>
+                </div>
+                <div id="category-children-2" class="category-children">
+                    <a href="https://github.com/LumiNexis-org/" class="children-category" target="_blank">GitHub</a>
+                    <a href="about.html#wadachi" class="children-category">轍</a>
+                    <label for="category-2" class="children-category-close">閉じる</label>
+                </div>
+
+                <input type="checkbox" class="category-switch" id="category-3" hidden>
+                <div class="category-switch">
+                    <label for="category-3" class="category-parent">Connect</label>
+                </div>
+                <div id="category-children-3" class="category-children">
+                    <a href="connect.html" class="children-category">お問い合わせ</a>
+                    <a href="about.html#connect" class="children-category">SNSでつながる</a>
+                    <label for="category-3" class="children-category-close">閉じる</label>
                 </div>
             </div>
-            <label class="sidebar_overlay" for="sidebar_toggle"></label>
+            <label for="switch" class="overlay"></label>
         </div>
 
         <main class="about">
-            <section class="about-page__intro section">
+
+            <section id="about" class="about-page-intro section">
                 <h1>LumiNexisについて</h1>
                 <p>
                     迷った時は自分の轍を辿る。<br>
                     そこに前向く灯があるから。<br>
                     LumiNexisは、自分の歩みを支えるブランドです。
                 </p>
-                <div class="about-page__story-link">
-                    <a href="./story.html">ストーリーを見る</a>
+                <div class="about-page-story-link">
+                    <a href="story.html">詳しく見る</a>
                 </div>
             </section>
 
-            <section class="about-page__philosophy section">
+            <section class="about-page-philosophy section">
                 <h2>理念</h2>
-                <p>意志を光に。未来を道に。</p>
+                <p><strong>意志を光に。未来を道に。</strong></p>
                 <p>〜意志が生まれ、やがて光となり、未来への道を照らすように〜</p>
             </section>
 
-            <section class="about-page__mission section">
+            <section class="about-page-mission section">
                 <h2>ミッション</h2>
                 <p><strong>夢は遠回りしても届くと証明する。</strong></p>
                 <p>決して平坦な道ではなかった。たくさん迷って、時間もかかった。</p>
@@ -118,14 +135,14 @@
                 <p><em>それが、自分なりのありがとうだから。</em></p>
             </section>
 
-            <section class="about-page__vision section">
+            <section class="about-page-vision section">
                 <h2>ビジョン</h2>
                 <p><strong>夢を信じて歩き続けられる世界へ。</strong></p>
                 <p>僕が、どんな時でも夢という光に向かって歩けたように、</p>
                 <p>誰もが <strong>自分の好きを信じ、夢を信じて</strong>、歩き続けられる未来をつくりたい。</p>
             </section>
 
-            <section class="about-page__values section">
+            <section class="about-page-values section">
                 <h2>バリュー</h2>
                 <ol>
                     <li>
@@ -143,10 +160,10 @@
                 </ol>
             </section>
 
-            <section class="about-page__activities section">
+            <section class="about-page-activities section">
                 <h2>活動内容</h2>
                 <p>
-                    LumiNexisは、“やらなきゃ”より“やりたい”を原動力に、<br>
+                    LumiNexisは、“<strong>やらなきゃ</strong>”より“<strong>やりたい</strong>”を原動力に、<br>
                     日々の中で「作りたい」と思ったものを、その時の自分の力で形にしていく活動をしています。<br><br>
                     完成した作品は、そのまま自分の歩みになり、<br>
                     後から振り返ったとき、<strong>どれもが「今の自分」を支える轍</strong>になっていく。<br>
@@ -158,7 +175,7 @@
                 <p class="activity-note">― 赴くままに、<strong>やりたい気持ちに従順に。</strong></p>
             </section>
 
-            <section class="about-page__greeting section">
+            <section class="about-page-greeting section">
                 <h2>代表挨拶</h2>
                 <div class="text-img">
                     <div class="profile">
@@ -168,15 +185,17 @@
                     <div class="greeting-text">
                         <p>
                             はじめまして。LumiNexis代表の一二三 翔です。<br>
-                            LumiNexisは、私自身がこれまで歩んできた“轍”を可視化し、夢に向かって進み続ける意思を映す場所として立ち上げた、個人活動団体です。<br>
-                            まだまだ小さな歩みですが、だからこそ、日々を積み重ね、作品を通して<strong>“夢は遠回りしても届く”</strong>ことを証明していきたいと思っています。<br>
+                            LumiNexisは、私自身がこれまで歩んできた“轍”を可視化し、<br>
+                            夢に向かって進み続ける意思を映す場所として立ち上げた、個人活動団体です。<br>
+                            まだまだ小さな歩みですが、だからこそ、日々を積み重ね、<br>
+                            作品を通して<strong>“夢は遠回りしても届く”</strong>ことを証明していきたいと思っています。<br>
                             よろしければ、応援いただけると嬉しいです。
                         </p>
                     </div>
                 </div>
             </section>
 
-            <section id="organization" class="about-page__organization section">
+            <section id="organization" class="about-page-organization section">
                 <h2>団体概要</h2>
                 <div class="table-wrapper">
                     <table class="table">
@@ -208,7 +227,7 @@
                 </div>
             </section>
 
-            <section id="wadachi" class="about-page__wadachi section">
+            <section id="wadachi" class="about-page-wadachi section">
                 <h2>轍</h2>
                 <p>
                     ここは、LumiNexisの歩みを残す場所。<br>
@@ -224,7 +243,7 @@
                 </p>
             </section>
 
-            <section id="connect" class="about-page__connect section">
+            <section id="connect" class="about-page-connect section">
                 <h2>Connect</h2>
                 <p>
                     LumiNexisに興味を持ってくださり、ありがとうございます。<br>
