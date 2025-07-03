@@ -57,11 +57,16 @@ public/
 ├── about.html
 ├── story.html
 ├── connect.html
+├── site.webmanifest
 └── static/
     ├── css/
     │   ├── common.css
+    │   ├── first-view.css
     │   └── style.css
     └── img/
+        ├── apple-touch-icon.png
+        ├── favicon.ico
+        ├── favicon.svg
         ├── logo.png
         ├── ogp.png
         └── profile-side.png
