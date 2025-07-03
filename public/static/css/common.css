@@ -4,13 +4,6 @@
   box-sizing: border-box;
 }
 
-/* ドラッグ時の指定 */
-::selection {
-    background-color: #3A4D6A;
-    color: #D0D6F9;
-}
-
-/* スクロールバーの指定 */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
