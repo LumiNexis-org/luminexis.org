@@ -101,6 +101,7 @@ main.top-page-main {
     background-color: #0C0F17;
     color: #4F729C;
     width: 25%;
+    vertical-align: middle;
 }
 
 .table tr:nth-child(even) td {
