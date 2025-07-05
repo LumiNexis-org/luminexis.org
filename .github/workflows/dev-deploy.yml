@@ -19,6 +19,8 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script: |
             cd ~/dev-luminexis.org
-            git pull origin dev
+            git fetch origin
+            git reset --hard origin/dev
+            git clean -fd
             docker compose -f docker-compose.dev.yml down
             docker compose -f docker-compose.dev.yml up -d
