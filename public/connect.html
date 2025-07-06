@@ -37,73 +37,48 @@
     <div class="wrapper">
         <header>
             <div class="left-content">
-                <a href="index.html">
-                    <img src="static/img/logo.png" alt="LumiNexis-Logo">
-                </a>
+                <a href="index.html"><img src="static/img/logo.png" alt="LumiNexis-Logo"></a>
             </div>
             <div class="right-content">
                 <nav>
-                    <ul class="nav">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="https://github.com/LumiNexis-org" target="_blank">Works</a></li>
-                        <li><a href="connect.html">Connect</a></li>
+                    <ul class="nav-link">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="connect.html" class="nav-link">Connect</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <div class="np-header">
-            <input type="checkbox" id="switch" class="slider-switch">
-            <div class="site_header">
+            <input type="checkbox" class="origin-switch" id="origin">
+            <div class="header">
                 <div class="left-content">
-                    <a href="index.html">
-                        <img src="static/img/logo.png" alt="LumiNexis-Logo">
-                    </a>
+                    <a href="index.html"><img src="static/img/logo.png" alt="LumiNexis-Logo"></a>
                 </div>
                 <div class="right-content">
-                    <label for="switch" class="menu-toggle">
+                    <label class="origin-label" for="origin">
                         <i class="fa-solid fa-grip-lines"></i>
                         <i class="fa-solid fa-xmark"></i>
                     </label>
                 </div>
             </div>
-            <div class="family-area">
-                <div class="category-switch">
-                    <a href="index.html" class="category-parent-link">Home</a>
+            <div class="select-area">
+                <div class="parent-category">
+                    <a href="index.html" class="children-item">Home</a>
                 </div>
 
-                <input type="checkbox" class="category-switch" id="category-1" hidden>
-                <div class="category-switch">
-                    <label for="category-1" class="category-parent">About</label>
-                </div>
-                <div id="category-children-1" class="category-children">
-                    <a href="about.html#about" class="children-category">ブランド概要</a>
-                    <a href="story.html" class="children-category">ストーリー</a>
-                    <a href="about.html#organization" class="children-category">団体概要</a>
-                    <label for="category-1" class="children-category-close">閉じる</label>
+
+                <div class="parent-category">
+                    <a href="about.html" class="children-item latter">About</a>
                 </div>
 
-                <input type="checkbox" class="category-switch" id="category-2" hidden>
-                <div class="category-switch">
-                    <label for="category-2" class="category-parent">Works</label>
-                </div>
-                <div id="category-children-2" class="category-children">
-                    <a href="https://github.com/LumiNexis-org/" class="children-category" target="_blank">GitHub</a>
-                    <a href="about.html#wadachi" class="children-category">轍</a>
-                    <label for="category-2" class="children-category-close">閉じる</label>
-                </div>
 
-                <input type="checkbox" class="category-switch" id="category-3" hidden>
                 <div class="category-switch">
-                    <label for="category-3" class="category-parent">Connect</label>
-                </div>
-                <div id="category-children-3" class="category-children">
-                    <a href="connect.html" class="children-category">お問い合わせ</a>
-                    <a href="about.html#connect" class="children-category">SNSでつながる</a>
-                    <label for="category-3" class="children-category-close">閉じる</label>
+                    <a href="connect.html" class="children-item latter">Connect</a>
                 </div>
             </div>
-            <label for="switch" class="overlay"></label>
+            <label for="origin" class="overlay"></label>
         </div>
 
         <main class="connect">
@@ -116,24 +91,20 @@
                     </p>
                     <form action="https://example.com/form-handler" method="POST">
                         <label for="name">お名前（任意）</label>
-                        <input type="text" id="name" name="name" placeholder="あなたのお名前" disabled>
+                        <input type="text" id="name" name="name" placeholder="あなたのお名前">
 
                         <label for="email">メールアドレス（任意）</label>
-                        <input type="email" id="email" name="email" placeholder="返信をご希望の場合" disabled>
+                        <input type="email" id="email" name="email" placeholder="返信をご希望の場合">
 
-                        <label for="message">メッセージ内容<span class="required" aria-hidden="true">*</span></label>
-                        <textarea id="message" name="message" rows="6" placeholder="お気軽にどうぞ" required
-                            disabled></textarea>
+                        <label for="message">メッセージ内容</label>
+                        <textarea id="message" name="message" rows="6" placeholder="お気軽にどうぞ" required></textarea>
 
-                        <div class="form-check">
-                            <label class="checkbox-wrapper">
-                                返信を希望する
-                                <input type="checkbox" disabled>
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
+                        <label>
+                            返信を希望する
+                            <input type="checkbox" name="replied" id="replied">
+                        </label>
 
-                        <button type="submit" disabled>メッセージを送信</button>
+                        <button class="primary" type="submit" disabled>メッセージを送信</button>
                     </form>
 
                     <div class="form-overlay">
@@ -142,6 +113,7 @@
                 </div>
             </section>
         </main>
+
         <footer>
             <p class="footer">&copy; LumiNexis All rights reserved.</p>
         </footer>

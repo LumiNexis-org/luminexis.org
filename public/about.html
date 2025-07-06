@@ -35,90 +35,61 @@
 
 <body>
     <div class="wrapper">
-
         <header>
             <div class="left-content">
-                <a href="index.html">
-                    <img src="static/img/logo.png" alt="LumiNexis-Logo">
-                </a>
+                <a href="index.html"><img src="static/img/logo.png" alt="LumiNexis-Logo"></a>
             </div>
             <div class="right-content">
                 <nav>
-                    <ul class="nav">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="https://github.com/LumiNexis-org" target="_blank">Works</a></li>
-                        <li><a href="connect.html">Connect</a></li>
+                    <ul class="nav-link">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="connect.html" class="nav-link">Connect</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <div class="np-header">
-            <input type="checkbox" id="switch" class="slider-switch">
-            <div class="site_header">
+            <input type="checkbox" class="origin-switch" id="origin">
+            <div class="header">
                 <div class="left-content">
-                    <a href="index.html">
-                        <img src="static/img/logo.png" alt="LumiNexis-Logo">
-                    </a>
+                    <a href="index.html"><img src="static/img/logo.png" alt="LumiNexis-Logo"></a>
                 </div>
                 <div class="right-content">
-                    <label for="switch" class="menu-toggle">
+                    <label class="origin-label" for="origin">
                         <i class="fa-solid fa-grip-lines"></i>
                         <i class="fa-solid fa-xmark"></i>
                     </label>
                 </div>
             </div>
-            <div class="family-area">
-                <div class="category-switch">
-                    <a href="index.html" class="category-parent-link">Home</a>
+            <div class="select-area">
+                <div class="parent-category">
+                    <a href="index.html" class="children-item">Home</a>
                 </div>
 
-                <input type="checkbox" class="category-switch" id="category-1" hidden>
-                <div class="category-switch">
-                    <label for="category-1" class="category-parent">About</label>
-                </div>
-                <div id="category-children-1" class="category-children">
-                    <a href="about.html#about" class="children-category">ブランド概要</a>
-                    <a href="story.html" class="children-category">ストーリー</a>
-                    <a href="about.html#organization" class="children-category">団体概要</a>
-                    <label for="category-1" class="children-category-close">閉じる</label>
+
+                <div class="parent-category">
+                    <a href="about.html" class="children-item latter">About</a>
                 </div>
 
-                <input type="checkbox" class="category-switch" id="category-2" hidden>
-                <div class="category-switch">
-                    <label for="category-2" class="category-parent">Works</label>
-                </div>
-                <div id="category-children-2" class="category-children">
-                    <a href="https://github.com/LumiNexis-org/" class="children-category" target="_blank">GitHub</a>
-                    <a href="about.html#wadachi" class="children-category">轍</a>
-                    <label for="category-2" class="children-category-close">閉じる</label>
-                </div>
 
-                <input type="checkbox" class="category-switch" id="category-3" hidden>
                 <div class="category-switch">
-                    <label for="category-3" class="category-parent">Connect</label>
-                </div>
-                <div id="category-children-3" class="category-children">
-                    <a href="connect.html" class="children-category">お問い合わせ</a>
-                    <a href="about.html#connect" class="children-category">SNSでつながる</a>
-                    <label for="category-3" class="children-category-close">閉じる</label>
+                    <a href="connect.html" class="children-item latter">Connect</a>
                 </div>
             </div>
-            <label for="switch" class="overlay"></label>
+            <label for="origin" class="overlay"></label>
         </div>
 
         <main class="about">
-
-            <section id="about" class="about-page-intro section">
+            <section class="about-page-intro section">
                 <h1>LumiNexisについて</h1>
                 <p>
                     迷った時は自分の轍を辿る。<br>
                     そこに前向く灯があるから。<br>
                     LumiNexisは、自分の歩みを支えるブランドです。
                 </p>
-                <div class="about-page-story-link">
-                    <a href="story.html">詳しく見る</a>
-                </div>
+                <a class="inline-link" href="story.html">詳しく見る</a>
             </section>
 
             <section class="about-page-philosophy section">
@@ -195,39 +166,37 @@
                 </div>
             </section>
 
-            <section id="organization" class="about-page-organization section">
+            <section class="about-page-organization section">
                 <h2>団体概要</h2>
-                <div class="table-wrapper">
-                    <table class="table">
-                        <tr>
-                            <th>団体名</th>
-                            <td>LumiNexis</td>
-                        </tr>
-                        <tr>
-                            <th>所在地</th>
-                            <td>個人で活動しているため、掲載は控えさせていただいております。</td>
-                        </tr>
-                        <tr>
-                            <th>設立</th>
-                            <td>2025年4月</td>
-                        </tr>
-                        <tr>
-                            <th>活動種別</th>
-                            <td>自己支援<br>〜自分の轍が、前を向く力に変わるように〜</td>
-                        </tr>
-                        <tr>
-                            <th>活動内容</th>
-                            <td>自己表現・自己成長<br>〜IT専門生としてのスキルを形にし、迷ったとき、過去の自分から“進む力”を受け取る活動です〜</td>
-                        </tr>
-                        <tr>
-                            <th>連絡先</th>
-                            <td>現在メールアドレス準備中です。<br>※個人活動のため、お電話での対応は行っておりません。</td>
-                        </tr>
-                    </table>
-                </div>
+                <table class="table">
+                    <tr>
+                        <th>団体名</th>
+                        <td>LumiNexis</td>
+                    </tr>
+                    <tr>
+                        <th>所在地</th>
+                        <td>個人で活動しているため、掲載は控えさせていただいております。</td>
+                    </tr>
+                    <tr>
+                        <th>設立</th>
+                        <td>2025年4月</td>
+                    </tr>
+                    <tr>
+                        <th>活動種別</th>
+                        <td>自己支援<br>〜自分の轍が、前を向く力に変わるように〜</td>
+                    </tr>
+                    <tr>
+                        <th>活動内容</th>
+                        <td>自己表現・自己成長<br>〜IT専門生としてのスキルを形にし、迷ったとき、過去の自分から“進む力”を受け取る活動です〜</td>
+                    </tr>
+                    <tr>
+                        <th>連絡先</th>
+                        <td>現在メールアドレス準備中です。<br>※個人活動のため、お電話での対応は行っておりません。</td>
+                    </tr>
+                </table>
             </section>
 
-            <section id="wadachi" class="about-page-wadachi section">
+            <section class="about-page-wadachi section">
                 <h2>轍</h2>
                 <p>
                     ここは、LumiNexisの歩みを残す場所。<br>
@@ -238,12 +207,11 @@
                     自分の歩みの“轍”として、すべてGitHubに残しています。<br>
                     Webサイトも含め、これからの創作も、ここに刻まれていきます。
                 </p>
-                <p class="github-link">
-                    ▶ <a href="https://github.com/LumiNexis-org" target="_blank">GitHub リポジトリはこちら</a>
-                </p>
+                <a class="inline-link github" href="https://github.com/LumiNexis-org"
+                    target="_blank">GitHubリポジトリはこちら</a>
             </section>
 
-            <section id="connect" class="about-page-connect section">
+            <section class="about-page-connect section">
                 <h2>Connect</h2>
                 <p>
                     LumiNexisに興味を持ってくださり、ありがとうございます。<br>
@@ -268,14 +236,14 @@
                         </a>
                     </li>
                     <li class="form-disabled">
-                        <span>
+                        <a href="#" disabled aria-disabled="true">
                             <i class="fa-solid fa-paper-plane"></i> フォームで送る(準備中)
-                        </span>
+                        </a>
                     </li>
                 </ul>
             </section>
-
         </main>
+
         <footer>
             <p class="footer">&copy; LumiNexis All rights reserved.</p>
         </footer>

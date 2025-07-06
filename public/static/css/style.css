@@ -23,7 +23,7 @@ main.top-page-main {
 
 .about-page-story-link a {
     background-color: transparent;
-    color: #3D5C85;
+    color: #446B9A;
     border: none;
     padding: 0.25rem 0.5rem;
     font-size: 1rem;
@@ -73,56 +73,51 @@ main.top-page-main {
 
 /* 団体概要 */
 
-table {
-    background-color: #0C1018;
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0C0F17;
     color: #5474AD;
     border: 1px solid #202530;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 2rem;
+    box-shadow: inset 0 1px 3px #1A1F2D80;
 }
 
-table caption {
+.table caption {
+    caption-side: top;
     color: #3E5C84;
-    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    font-weight: bold;
 }
 
-table th {
-    background-color: #181D28;
-    color: #4F729C;
+.table th,
+.table td {
     border-bottom: 1px solid #202530;
-    padding: 0.5rem;
+    text-align: left;
+    padding: 0.8rem 1rem;
+    vertical-align: top;
 }
 
-table td {
-    border: 1px solid #202530;
-    padding: 0.5rem;
+.table th {
+    background-color: #0C0F17;
+    color: #4F729C;
+    width: 25%;
+    vertical-align: middle;
 }
 
-table tbody tr:nth-child(even) {
-    background-color: #0A0E14;
+.table tr:nth-child(even) td {
+    background-color: #0C0F17;
+}
+
+.table td {
+    color: #5474AD;
+    line-height: 1.6;
 }
 
 /* 轍 */
 
-.github-link {
+.inline-link.github {
+    display: block;
     text-align: center;
-}
-
-.github-link a {
-    background-color: transparent;
-    color: #3D5C85;
-    border: none;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: color 0.2s ease, text-decoration 0.2s ease;
-}
-
-.github-link a:hover {
-    color: #5A84BB;
-    text-decoration: underline;
 }
 
 /* Connect */
@@ -140,38 +135,9 @@ table tbody tr:nth-child(even) {
 }
 
 .about-page-connect ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem;
-    text-decoration: none;
-    font-size: 1rem;
-    background-color: transparent;
-    color: #5474AD;
-    border: 1px solid #446B9A;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.about-page-connect ul li a:hover {
-    background-color: #2B3342;
-    color: #D0D6F9;
-}
-
-.form-disabled span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: #4C5670;
-    cursor: not-allowed;
-    opacity: 0.5;
-    font-weight: bold;
-    border-radius: 0.4rem;
-    padding: 0.75rem;
-    border: 1px solid #2B3342;
+    padding: 1rem;
+    display: block;
+    text-align: center;
 }
 
 /* ブランドストーリー */
@@ -197,156 +163,139 @@ table tbody tr:nth-child(even) {
 
 /* フォーム */
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1rem;
+.contact-form.section {
+    background-color: #0C0F17;
+    border: 1px solid #202530;
+    box-shadow: inset 0 1px 3px #20253055;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+/* タイトル */
+.contact-form h2 {
+    color: #4F729C;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 説明文 */
+.contact-form .desc {
+    color: #5474AD;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
 }
 
 /* ラベル */
-.form-container form label {
-    color: #4F729C;
-    font-weight: 500;
+.contact-form label {
     display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    color: #4F729C;
+    font-weight: 600;
+    font-size: 0.925rem;
+    letter-spacing: 0.03em;
 }
 
-/* 入力欄、テキストエリア、セレクト */
-input,
-textarea,
-select {
+/* 入力欄／テキストエリア */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #202530;
+    border-radius: 0.5rem;
     background-color: #0C0F17;
     color: #5474AD;
-    border: 1px solid #2B3342;
-    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #485366;
+    box-shadow: 0 0 0 2px #446B9A88;
+    outline: none;
+}
+
+/* placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #4C5670;
+    font-style: italic;
+}
+
+/* disabled */
+.contact-form input:disabled,
+.contact-form textarea:disabled {
+    background-color: #0E1017;
+    border-color: #1A1D25;
+    color: #4C5670;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* チェックボックス */
+.contact-form input[type="checkbox"] {
+    accent-color: #485366;
+    transform: scale(1.15);
+    margin-right: 0.5rem;
+}
+
+/* ボタン */
+.contact-form button.primary {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #446B9A;
+    background-color: #121620;
+    border: 2px solid #485366;
     border-radius: 0.5rem;
-    font-size: 1rem;
-    font-family: 'Noto Sans JP', sans-serif;
+    box-shadow: 0 0 0 1px #202530aa;
     transition: all 0.3s ease;
 }
 
-/* プレースホルダー */
-::placeholder {
-    color: #3A4D6A;
-    opacity: 1;
+.contact-form button.primary:hover,
+.contact-form button.primary:focus-visible {
+    color: #5A84BB;
+    border-color: #303848;
+    box-shadow: 0 0 0 2px #446B9A88;
 }
 
-/* フォーカス・選択時 */
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(90, 132, 187, 0.5);
-    border-color: #5A84BB;
-}
-
-/* 無効状態 */
-input:disabled,
-textarea:disabled,
-select:disabled {
-    background-color: #0B0D14;
+.contact-form button.primary:disabled {
     color: #4C5670;
-    border-color: #2B3342;
+    background-color: #0E1017;
+    border: 1px solid #1A1D25;
+    opacity: 0.5;
     cursor: not-allowed;
+    box-shadow: none;
 }
 
-/* チェックボックスカスタム */
-.contact-form .checkbox-wrapper {
-    display: flex;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #3E5C84;
-    align-items: center;
-    gap: 1rem;
-}
-
-.checkbox-wrapper input[type="checkbox"] {
-    display: none;
-}
-
-.checkbox-wrapper .checkmark {
-    width: 18px;
-    height: 18px;
-    border: 1px solid #2B3342;
-    background-color: #0C1018;
-    border-radius: 4px;
-    position: relative;
-    display: inline-flex;
-}
-
-.checkbox-wrapper .checkmark::after {
-    content: "";
+/* オーバーレイ */
+.form-overlay {
     position: absolute;
-    display: none;
-    left: 4px;
-    top: 1px;
-    width: 5px;
-    height: 10px;
-    border: solid #5474AD;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
-.checkbox-wrapper input:checked + .checkmark::after {
-    display: block;
-}
-
-.checkbox-wrapper input:checked+.checkmark {
-    border-color: #5474AD;
-}
-
-.contact-form button {
+    inset: 0;
+    background-color: rgba(11, 13, 20, 0.8);
+    backdrop-filter: blur(3px);
+    border-radius: 1rem;
     display: flex;
-    margin: 2rem auto 0;
-    padding: 0.75rem 1.5rem;
-    background-color: #1E2331;
-    color: #5474AD;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
 }
 
-.contact-form button:hover {
-    background-color: #2B3342;
-    color: #fff;
-    box-shadow: 0 0 8px #D0D6F9aa;
-}
-
-
-/* ボタン */
-button[type="submit"] {
-    background-color: #446B9A;
-    color: #ffffff;
-    border: none;
-    padding: 0.75rem 1.5rem;
+.form-overlay p {
+    color: #4F729C;
     font-size: 1rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-align: center;
+    padding: 1.5rem;
+    line-height: 1.8;
 }
 
-button[type="submit"]:hover:not(:disabled) {
-    background-color: #5A84BB;
-}
 
-button[type="submit"]:disabled {
-    background-color: #2B3342;
-    color: #4C5670;
-    cursor: not-allowed;
-}
-
-/* 必須アスタリスク */
-.required {
-    color: #C45B5B;
-    margin-left: 0.25rem;
-    font-weight: bold;
-}
-
-.form-container {
+/* .form-container {
     position: relative;
     width: 100%;
 }
@@ -362,7 +311,7 @@ button[type="submit"]:disabled {
     height: 100%;
     background-color: rgba(11, 13, 20, 0.7);
     z-index: 96;
-}
+} */
 
 @media (max-width: 768px) {
     main {
@@ -371,8 +320,9 @@ button[type="submit"]:disabled {
 
     .about {
         width: 100%;
+        margin-top: 8rem;
     }
-    
+
     .story-page-brand {
         width: 100%;
     }
@@ -395,5 +345,21 @@ button[type="submit"]:disabled {
 
     .about-page-connect ul {
         max-width: 100%;
+    }
+
+    /* about.html 団体概要 */
+    .table th,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table th {
+        background-color: #0C0F17;
+        padding-top: 1rem;
+    }
+
+    .table td {
+        padding-bottom: 1rem;
     }
 }
