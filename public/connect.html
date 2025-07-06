@@ -91,22 +91,18 @@
                     </p>
                     <form action="https://example.com/form-handler" method="POST">
                         <label for="name">お名前（任意）</label>
-                        <input type="text" id="name" name="name" placeholder="あなたのお名前" disabled>
+                        <input type="text" id="name" name="name" placeholder="あなたのお名前">
 
                         <label for="email">メールアドレス（任意）</label>
-                        <input type="email" id="email" name="email" placeholder="返信をご希望の場合" disabled>
+                        <input type="email" id="email" name="email" placeholder="返信をご希望の場合">
 
-                        <label for="message">メッセージ内容<span class="required" aria-hidden="true">*</span></label>
-                        <textarea id="message" name="message" rows="6" placeholder="お気軽にどうぞ" required
-                            disabled></textarea>
+                        <label for="message">メッセージ内容</label>
+                        <textarea id="message" name="message" rows="6" placeholder="お気軽にどうぞ" required></textarea>
 
-                        <div class="form-check">
-                            <label class="checkbox-wrapper">
-                                返信を希望する
-                                <input type="checkbox" disabled>
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
+                        <label>
+                            返信を希望する
+                            <input type="checkbox" name="replied" id="replied">
+                        </label>
 
                         <button class="primary" type="submit" disabled>メッセージを送信</button>
                     </form>

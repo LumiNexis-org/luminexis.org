@@ -163,96 +163,139 @@ main.top-page-main {
 
 /* フォーム */
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1rem;
+.contact-form.section {
+    background-color: #0C0F17;
+    border: 1px solid #202530;
+    box-shadow: inset 0 1px 3px #20253055;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+/* タイトル */
+.contact-form h2 {
+    color: #4F729C;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 説明文 */
+.contact-form .desc {
+    color: #5474AD;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
 }
 
 /* ラベル */
-.form-container form label {
-    color: #4F729C;
-    font-weight: 500;
+.contact-form label {
     display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    color: #4F729C;
+    font-weight: 600;
+    font-size: 0.925rem;
+    letter-spacing: 0.03em;
 }
 
-/* 入力欄、テキストエリア、セレクト */
-input,
-textarea,
-select {
+/* 入力欄／テキストエリア */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #202530;
+    border-radius: 0.5rem;
     background-color: #0C0F17;
     color: #5474AD;
-    border: 1px solid #2B3342;
-    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #485366;
+    box-shadow: 0 0 0 2px #446B9A88;
+    outline: none;
+}
+
+/* placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #4C5670;
+    font-style: italic;
+}
+
+/* disabled */
+.contact-form input:disabled,
+.contact-form textarea:disabled {
+    background-color: #0E1017;
+    border-color: #1A1D25;
+    color: #4C5670;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* チェックボックス */
+.contact-form input[type="checkbox"] {
+    accent-color: #485366;
+    transform: scale(1.15);
+    margin-right: 0.5rem;
+}
+
+/* ボタン */
+.contact-form button.primary {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #446B9A;
+    background-color: #121620;
+    border: 2px solid #485366;
     border-radius: 0.5rem;
-    font-size: 1rem;
-    font-family: 'Noto Sans JP', sans-serif;
+    box-shadow: 0 0 0 1px #202530aa;
     transition: all 0.3s ease;
 }
 
-/* プレースホルダー */
-::placeholder {
-    color: #3A4D6A;
-    opacity: 1;
-}
-
-/* フォーカス・選択時 */
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(90, 132, 187, 0.5);
-    border-color: #5A84BB;
-}
-
-/* 無効状態 */
-input:disabled,
-textarea:disabled,
-select:disabled {
-    background-color: #0B0D14;
-    color: #4C5670;
-    border-color: #2B3342;
-    cursor: not-allowed;
-}
-
-/* チェックボックスカスタム */
-ï
-
-/* ボタン */
-button[type="submit"] {
-    background-color: transparent;
-    border: 1px solid #446B9A;
-    color: #446B9A;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-button[type="submit"]:hover:not(:disabled) {
-    background-color: transparent;
+.contact-form button.primary:hover,
+.contact-form button.primary:focus-visible {
     color: #5A84BB;
+    border-color: #303848;
+    box-shadow: 0 0 0 2px #446B9A88;
 }
 
-button[type="submit"]:disabled {
-    background-color: #4C5670;
+.contact-form button.primary:disabled {
     color: #4C5670;
+    background-color: #0E1017;
+    border: 1px solid #1A1D25;
+    opacity: 0.5;
     cursor: not-allowed;
+    box-shadow: none;
 }
 
-/* 必須アスタリスク */
-.required {
-    color: #C45B5B;
-    margin-left: 0.25rem;
-    font-weight: bold;
+/* オーバーレイ */
+.form-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(11, 13, 20, 0.8);
+    backdrop-filter: blur(3px);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
 }
 
-.form-container {
+.form-overlay p {
+    color: #4F729C;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1.5rem;
+    line-height: 1.8;
+}
+
+
+/* .form-container {
     position: relative;
     width: 100%;
 }
@@ -268,7 +311,7 @@ button[type="submit"]:disabled {
     height: 100%;
     background-color: rgba(11, 13, 20, 0.7);
     z-index: 96;
-}
+} */
 
 @media (max-width: 768px) {
     main {
