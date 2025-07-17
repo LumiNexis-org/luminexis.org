@@ -276,4 +276,8 @@ footer {
   h6 {
     font-size: 0.875rem;
   }
+
+  main {
+    margin-top: 7rem;
+  }
 }
