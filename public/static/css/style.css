@@ -202,6 +202,10 @@
         width: 100%;
     }
 
+    .about {
+        margin-top: 7rem;
+    }
+
     .about-page-connect ul {
         max-width: 100%;
     }
