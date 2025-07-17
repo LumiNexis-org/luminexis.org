@@ -135,6 +135,17 @@
     border-radius: 30px;
 }
 
+.form-disabled span {
+    cursor: not-allowed;
+    opacity: 0.6;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    background-color: rgba(11, 13, 20, 0.8);;
+    border: 1px solid #202530;
+    border-radius: 30px;
+}
+
 /* ブランドストーリー */
 
 .story-page-brand {
@@ -184,27 +195,11 @@
 
 @media (max-width: 768px) {
 
-    .about {
-        width: 100%;
-        margin-top: 7rem;
-    }
-
-    .story-page-brand {
-        width: 100%;
-    }
-
-    .story-page-logo {
-        width: 100%;
-    }
-
-    .story-page-logo-img {
-        width: 100%;
-    }
-
-    .profile {
-        width: 100%;
-    }
-
+    .about,
+    .story-page-brand,
+    .story-page-logo,
+    .story-page-logo-img,
+    .profile,
     .greeting-text {
         width: 100%;
     }
