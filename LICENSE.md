@@ -18,5 +18,5 @@ No additional restrictions — You may not apply legal terms or technological me
 
 ---
 
-For full license text, see:  
+For full license text, see:
 [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)
