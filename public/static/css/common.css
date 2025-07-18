@@ -59,7 +59,7 @@ header {
   cursor: pointer;
 }
 
-.nav-link {
+.nav-links {
   display: flex;
   gap: 1.5rem;
   list-style: none;
