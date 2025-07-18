@@ -1,17 +1,15 @@
 /* === index.html === */
 
-main.top-page-main {
-    width: 100%;
-    height: 100vh;
+.main-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-
 /* === about.css === */
-
 .about {
     width: 70%;
     margin: auto;
@@ -77,14 +75,11 @@ main.top-page-main {
     width: 100%;
     border-collapse: collapse;
     background-color: #0C0F17;
-    color: #5474AD;
     border: 1px solid #202530;
-    box-shadow: inset 0 1px 3px #1A1F2D80;
 }
 
 .table caption {
     caption-side: top;
-    color: #3E5C84;
     padding: 0.5rem;
     font-weight: bold;
 }
@@ -99,7 +94,6 @@ main.top-page-main {
 
 .table th {
     background-color: #0C0F17;
-    color: #4F729C;
     width: 25%;
     vertical-align: middle;
 }
@@ -109,7 +103,6 @@ main.top-page-main {
 }
 
 .table td {
-    color: #5474AD;
     line-height: 1.6;
 }
 
@@ -138,6 +131,19 @@ main.top-page-main {
     padding: 1rem;
     display: block;
     text-align: center;
+    border: 1px solid #202530;
+    border-radius: 30px;
+}
+
+.form-disabled span {
+    cursor: not-allowed;
+    opacity: 0.6;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    background-color: rgba(11, 13, 20, 0.8);
+    border: 1px solid #202530;
+    border-radius: 30px;
 }
 
 /* ブランドストーリー */
@@ -159,118 +165,74 @@ main.top-page-main {
     width: 100%;
 }
 
-
-
 /* フォーム */
 
 .contact-form.section {
-    background-color: #0C0F17;
-    border: 1px solid #202530;
-    box-shadow: inset 0 1px 3px #20253055;
-    padding: 3rem 2rem;
-    border-radius: 1rem;
     position: relative;
 }
 
-/* タイトル */
-.contact-form h2 {
-    color: #4F729C;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* 説明文 */
-.contact-form .desc {
-    color: #5474AD;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
-/* ラベル */
-.contact-form label {
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 0.4rem;
-    color: #4F729C;
-    font-weight: 600;
-    font-size: 0.925rem;
-    letter-spacing: 0.03em;
-}
-
-/* 入力欄／テキストエリア */
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid #202530;
-    border-radius: 0.5rem;
+form {
     background-color: #0C0F17;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
     color: #5474AD;
-    font-size: 0.875rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #485366;
-    box-shadow: 0 0 0 2px #446B9A88;
-    outline: none;
-}
-
-/* placeholder */
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #4C5670;
-    font-style: italic;
-}
-
-/* disabled */
-.contact-form input:disabled,
-.contact-form textarea:disabled {
-    background-color: #0E1017;
-    border-color: #1A1D25;
-    color: #4C5670;
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-/* チェックボックス */
-.contact-form input[type="checkbox"] {
-    accent-color: #485366;
-    transform: scale(1.15);
-    margin-right: 0.5rem;
-}
-
-/* ボタン */
-.contact-form button.primary {
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: #446B9A;
-    background-color: #121620;
-    border: 2px solid #485366;
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    background-color: #0B0D14;
+    border: 1px solid #2B3342;
     border-radius: 0.5rem;
-    box-shadow: 0 0 0 1px #202530aa;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form textarea::placeholder {
+    color: #4C5670;
+}
+
+form input[type="checkbox"] {
+    margin-left: 0.5rem;
+}
+
+button.primary {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #446B9A;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: not-allowed;
+    /* disabled 時にわかりやすく */
+    opacity: 0.6;
     transition: all 0.3s ease;
 }
 
-.contact-form button.primary:hover,
-.contact-form button.primary:focus-visible {
-    color: #5A84BB;
-    border-color: #303848;
-    box-shadow: 0 0 0 2px #446B9A88;
+button.primary:enabled {
+    cursor: pointer;
+    background-color: #5A84BB;
+    opacity: 1;
 }
 
-.contact-form button.primary:disabled {
-    color: #4C5670;
-    background-color: #0E1017;
-    border: 1px solid #1A1D25;
-    opacity: 0.5;
-    cursor: not-allowed;
-    box-shadow: none;
+button.primary:hover:enabled {
+    background-color: #5474AD;
 }
 
 /* オーバーレイ */
@@ -287,60 +249,25 @@ main.top-page-main {
 }
 
 .form-overlay p {
-    color: #4F729C;
     font-size: 1rem;
     text-align: center;
     padding: 1.5rem;
     line-height: 1.8;
 }
 
-
-/* .form-container {
-    position: relative;
-    width: 100%;
-}
-
-.form-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(11, 13, 20, 0.7);
-    z-index: 96;
-} */
-
 @media (max-width: 768px) {
-    main {
-        padding: 0;
+
+    .about,
+    .story-page-brand,
+    .story-page-logo,
+    .story-page-logo-img,
+    .profile,
+    .greeting-text {
+        width: 100%;
     }
 
     .about {
-        width: 100%;
-        margin-top: 8rem;
-    }
-
-    .story-page-brand {
-        width: 100%;
-    }
-
-    .story-page-logo {
-        width: 100%;
-    }
-
-    .story-page-logo-img {
-        width: 100%;
-    }
-
-    .profile {
-        width: 100%;
-    }
-
-    .greeting-text {
-        width: 100%;
+        margin-top: 7rem;
     }
 
     .about-page-connect ul {
@@ -355,7 +282,6 @@ main.top-page-main {
     }
 
     .table th {
-        background-color: #0C0F17;
         padding-top: 1rem;
     }
 
